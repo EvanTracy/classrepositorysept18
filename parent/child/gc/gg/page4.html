@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Rankings </title>
+</head>
+  <body bgcolor="pink">
+<body>
+
+<h2>A Ranking of Summer Activities </h2>
+
+<table style="width:100%">
+  <tr>
+    <th>image</th>
+    <th>activity</th>
+    <th>rating</th>
+  </tr>
+  <tr>
+    <td><img src="../../../images/beersmile.JPG" width="200" height="200"></td>
+    <td>Drinking beer and making music</td>
+    <td>Rating:8/10</td>
+  </tr>
+  <tr>
+    <td><img src="../../../images/hatheat.jpeg" width="200" height="200"> <br>
+</td>
+    <td>3d Printing</td>
+    <td>Rating:6.5/10</td>
+  </tr>
+  <tr>
+    <td><img src="../../../images/pict191127_0911340000.JPG" width="200" height="200"> <br>
+</td>
+    <td>Summer classes</td>
+    <td>Rating: 5/10</td>
+  </tr>
+  <tr>
+    <td> <img src="../../../images/unnamed.png" width="200" height="200">
+      <br></td>
+      <td> Talking on the phone to everyone</td>
+      <td> Rating: 3/10 </td>
+</table>
+<br>
+<a href="../../../lastsummer.html" target="_blank"> go home <br> </a>
+<a href="ggg/index.html" target="_blank"> next page <br> </a>
+
+  <div class="comment">
+<textarea id="title" type="text "rows="20" cols="100" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+<input type="submit" value="Post" onclick="insert()" style="width:200px;" /></form>
+</div>
+<div id="display"></div>
+<script type="text/javascript">
+var titles = [];
+var titleInput = document.getElementById("title");
+var messageBox = document.getElementById("display");
+function Allow()
+{
+if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+{
+user.title.value="";
+alert("Please Enter only alphabets");
+}
+window.location.reload()
+}
+function insert () {
+titles.push(titleInput.value);
+clearAndShow();
+}
+function clearAndShow ()
+{
+titleInput.value = "";
+messageBox.innerHTML = "";
+messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+}
+</script>
+</body>
+</html>
